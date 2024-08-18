@@ -1,0 +1,79 @@
+<template>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <DataSectionItem
+      v-for="metric in dashboardMetrics"
+      :key="metric.id"
+      :title="metric.title"
+      :value="metric.value"
+      :change-text="metric.changeText"
+      :up="metric.changeDirection === 'up'"
+      :icon-background="metric.iconBackground"
+      :icon-color="metric.iconColor"
+    >
+      <template #icon>
+        <VaIcon :name="metric.icon" size="large" v-if="metric.icon"/>
+        <div v-html="metric.svgIcon" v-else></div>
+      </template>
+    </DataSectionItem>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useColors } from 'vuestic-ui'
+import DataSectionItem from './DataSectionItem.vue'
+
+import river from '../../../assets/icons/dashboard-river.svg?raw'
+import lake from '../../../assets/icons/dashboard-lake.svg?raw'
+import dam from '../../../assets/icons/dashboard-dam.svg?raw'
+
+interface DashboardMetric {
+  id: string
+  title: string
+  value: string
+  icon: string | null
+  svgIcon: string | null
+  changeText: string
+  changeDirection: 'up' | 'down'
+  iconBackground: string
+  iconColor: string
+}
+
+const { getColor } = useColors()
+
+const dashboardMetrics = computed<DashboardMetric[]>(() => [
+  {
+    id: 'openInvoices',
+    title: 'Ongoing river rejuvenation',
+    value: '200',
+    svgIcon: river,
+    icon: null,
+    changeText: '$1, 450',
+    changeDirection: 'down',
+    iconBackground: "inheret",
+    iconColor: getColor('on-success'),
+  },
+  {
+    id: 'ongoingProjects',
+    title: 'Lakes developed',
+    value: '230',
+    svgIcon: lake,
+    icon: null,
+    changeText: '25.36%',
+    changeDirection: 'up',
+    iconBackground: "inheret",
+    iconColor: getColor('on-info'),
+  },
+  {
+    id: 'employees',
+    title: 'Checkdams developed',
+    value: '130',
+    svgIcon: dam,
+    icon: null,
+    changeText: '2.5%',
+    changeDirection: 'up',
+    iconBackground: "inheret",
+    iconColor: getColor('on-danger'),
+  }
+])
+</script>
