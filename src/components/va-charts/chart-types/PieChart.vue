@@ -1,5 +1,5 @@
 <template>
-  <Pie :data="props.data" :options="options" />
+  <Pie :data="props.data" :options="options2" />
 </template>
 
 <script lang="ts" setup>
@@ -14,4 +14,17 @@ const props = defineProps<{
   data: TPieChartData
   options?: ChartOptions<'pie'>
 }>()
+
+const options2: ChartOptions<'pie'> = {
+  maintainAspectRatio: false,
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+    },
+    tooltip: {
+      enabled: true,
+    },
+  },
+}
 </script>

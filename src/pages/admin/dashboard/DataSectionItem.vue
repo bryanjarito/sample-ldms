@@ -26,14 +26,14 @@
 // import { computed } from 'vue'
 import { VaCard } from 'vuestic-ui'
 
-// const props = defineProps<{
-//   title: string
-//   value: string | number
-//   changeText: string
-//   up: boolean
-//   iconBackground: string
-//   iconColor: string
-// }>()
+defineProps<{
+  title: string
+  value: string | number
+  changeText: string
+  up: boolean
+  iconBackground: string
+  iconColor: string
+}>()
 
 // const changeClass = computed(() => ({
 //   'text-success': props.up,

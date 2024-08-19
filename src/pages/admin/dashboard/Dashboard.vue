@@ -38,7 +38,7 @@ const data = {
     </div> -->
     <DataSection />
     <div class="flex justify-center w-full">
-      <div class="w-2/5">
+      <div class="w-full md:w-3/5 lg:w-2/5 relative h-[40vh] md:h-[50vh]">
         <PieChart :data="data" />
       </div>
     </div>

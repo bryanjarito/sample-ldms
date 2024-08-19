@@ -2,6 +2,7 @@
 import { PropType, computed, ref, watch } from 'vue'
 import { VaImage } from 'vuestic-ui'
 import { Lake } from '../types'
+import { component as Viewer } from 'v-viewer'
 // import UserAvatar from './UserAvatar.vue'
 // import { useProjects } from '../../projects/composables/useProjects'
 // import { validators } from '../../../services/utils'

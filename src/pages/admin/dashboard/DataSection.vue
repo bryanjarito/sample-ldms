@@ -44,9 +44,9 @@ const { getColor } = useColors()
 
 const dashboardMetrics = computed<DashboardMetric[]>(() => [
   {
-    id: 'openInvoices',
-    title: 'Ongoing river rejuvenation',
-    value: '200',
+    id: 'rivers',
+    title: 'Rivers',
+    value: '159',
     svgIcon: river,
     icon: null,
     changeText: '$1, 450',
@@ -55,10 +55,10 @@ const dashboardMetrics = computed<DashboardMetric[]>(() => [
     iconColor: getColor('on-success'),
   },
   {
-    id: 'ongoingProjects',
-    title: 'Lakes developed',
-    value: '230',
-    svgIcon: lake,
+    id: 'dams',
+    title: 'Check Dams',
+    value: '43',
+    svgIcon: dam,
     icon: null,
     changeText: '25.36%',
     changeDirection: 'up',
@@ -66,10 +66,10 @@ const dashboardMetrics = computed<DashboardMetric[]>(() => [
     iconColor: getColor('on-info'),
   },
   {
-    id: 'employees',
-    title: 'Checkdams developed',
-    value: '130',
-    svgIcon: dam,
+    id: 'trees',
+    title: 'Trees',
+    value: '3,200,923',
+    svgIcon: lake,
     icon: null,
     changeText: '2.5%',
     changeDirection: 'up',
