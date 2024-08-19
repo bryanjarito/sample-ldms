@@ -9,7 +9,7 @@ import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } f
 import { TPieChartData } from '../../../data/types'
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
-ChartJS.defaults.font.size = 15;
+ChartJS.defaults.font.size = 15
 const props = defineProps<{
   data: TPieChartData
   options?: ChartOptions<'pie'>

@@ -90,10 +90,8 @@ const beforeEditFormModalClose = async (hide: () => unknown) => {
             </template>
           </VaInput>
         </div>
-        <RouterLink to="/users/user-create" aria-label="Visit home page">
-          Add User
-        </RouterLink>
-          <VaButton @click="showAddUserModal">Add User</VaButton>
+        <RouterLink to="/users/user-create" aria-label="Visit home page"> Add User </RouterLink>
+        <VaButton @click="showAddUserModal">Add User</VaButton>
       </div>
 
       <UsersTable

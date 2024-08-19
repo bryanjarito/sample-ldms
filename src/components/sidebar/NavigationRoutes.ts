@@ -36,7 +36,7 @@ export default {
         {
           name: 'create',
           displayName: 'Create Lake',
-        }
+        },
       ],
     },
     {
@@ -53,7 +53,7 @@ export default {
         {
           name: 'river-create',
           displayName: 'Create River',
-        }
+        },
       ],
     },
     {
@@ -70,7 +70,7 @@ export default {
         {
           name: 'dam-create',
           displayName: 'Create Dam',
-        }
+        },
       ],
     },
     // {
