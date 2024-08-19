@@ -1,6 +1,7 @@
 import lake from '../../assets/icons/lake.svg?raw'
 import river from '../../assets/icons/river.svg?raw'
 import dam from '../../assets/icons/dam.svg?raw'
+import tree from '../../assets/icons/tree.svg?raw'
 
 export interface INavigationRoute {
   name: string
@@ -70,6 +71,23 @@ export default {
         {
           name: 'dam-create',
           displayName: 'Create Dam',
+        },
+      ],
+    },
+    {
+      name: 'tree',
+      displayName: 'Trees',
+      meta: {
+        svgIcon: tree,
+      },
+      children: [
+        {
+          name: 'tree-list',
+          displayName: 'List',
+        },
+        {
+          name: 'tree-create',
+          displayName: 'Create Tree',
         },
       ],
     },

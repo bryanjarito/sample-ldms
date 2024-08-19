@@ -109,6 +109,21 @@ const routes: Array<RouteRecordRaw> = [
         ],
       },
       {
+        path: 'trees',
+        children: [
+          {
+            name: 'tree-list',
+            path: 'tree-list',
+            component: () => import('../pages/trees/TreesPage.vue'),
+          },
+          {
+            name: 'tree-create',
+            path: 'tree-create',
+            component: () => import('../pages/trees/CreateTreePage.vue'),
+          },
+        ],
+      },
+      {
         name: 'projects',
         path: 'projects',
         component: () => import('../pages/projects/ProjectsPage.vue'),
