@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory, RouteRecordRaw, RouterView } from 'vue-router'
-import { h } from 'vue'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+// import { h } from 'vue'
 
 import AuthLayout from '../layouts/AuthLayout.vue'
 import AppLayout from '../layouts/AppLayout.vue'
@@ -41,30 +41,30 @@ const routes: Array<RouteRecordRaw> = [
         path: 'lakes',
         children: [
           // {
-            // path: 'lakes',
+          // path: 'lakes',
+          // children: [
+          {
+            name: 'list',
+            path: 'list',
+            component: () => import('../pages/lakes/LakesPage.vue'),
             // children: [
-              {
-                name: 'list',
-                path: 'list',
-                component: () => import('../pages/lakes/LakesPage.vue'),
-                // children: [
-                //   {
-                //     name: 'lake',
-                //     path: ':id',
-                //     component: () => import('../pages/lakes/ViewLakePage.vue'),
-                //   }
-                // ]
-              },
-              {
-                name: 'create',
-                path: 'create',
-                component: () => import('../pages/lakes/CreateLakePage.vue'),
-              },
-              {
-                name: 'lake',
-                path: ':id',
-                component: () => import('../pages/lakes/ViewLakePage.vue'),
-              }
+            //   {
+            //     name: 'lake',
+            //     path: ':id',
+            //     component: () => import('../pages/lakes/ViewLakePage.vue'),
+            //   }
+            // ]
+          },
+          {
+            name: 'create',
+            path: 'create',
+            component: () => import('../pages/lakes/CreateLakePage.vue'),
+          },
+          {
+            name: 'lake',
+            path: ':id',
+            component: () => import('../pages/lakes/ViewLakePage.vue'),
+          },
           //   ]
           // },
           // {
@@ -72,7 +72,7 @@ const routes: Array<RouteRecordRaw> = [
           //   path: 'lake-create',
           //   component: () => import('../pages/lakes/CreateLakePage.vue'),
           // },
-        ]
+        ],
       },
       {
         name: 'river',
@@ -89,7 +89,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'river-create',
             component: () => import('../pages/payments/PaymentsPage.vue'),
           },
-        ]
+        ],
       },
       {
         name: 'dam',
@@ -106,7 +106,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'dam-create',
             component: () => import('../pages/payments/PaymentsPage.vue'),
           },
-        ]
+        ],
       },
       {
         name: 'projects',

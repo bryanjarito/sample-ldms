@@ -4,7 +4,7 @@ import { Lake } from '../types'
 import { PropType, computed, toRef } from 'vue'
 import { Pagination, Sorting } from '../../../data/pages/lakes'
 import { useVModel } from '@vueuse/core'
-import { Project } from '../../projects/types'
+// import { Project } from '../../projects/types'
 
 const columns = defineVaDataTableColumns([
   { label: 'English Name', key: 'englishName', sortable: true },
@@ -37,11 +37,11 @@ const lakes = toRef(props, 'lakes')
 const sortByVModel = useVModel(props, 'sortBy', emit)
 const sortingOrderVModel = useVModel(props, 'sortingOrder', emit)
 
-const roleColors: Record<UserRole, string> = {
-  admin: 'danger',
-  user: 'background-element',
-  owner: 'warning',
-}
+// const roleColors: Record<UserRole, string> = {
+//   admin: 'danger',
+//   user: 'background-element',
+//   owner: 'warning',
+// }
 
 const totalPages = computed(() => Math.ceil(props.pagination.total / props.pagination.perPage))
 
@@ -62,22 +62,22 @@ const onUserDelete = async (lake: Lake) => {
   }
 }
 
-const formatProjectNames = (projects: Project[]) => {
-  if (projects.length === 0) return 'No projects'
-  if (projects.length <= 2) {
-    return projects.map((project) => project.project_name).join(', ')
-  }
+// const formatProjectNames = (projects: Project[]) => {
+//   if (projects.length === 0) return 'No projects'
+//   if (projects.length <= 2) {
+//     return projects.map((project) => project.project_name).join(', ')
+//   }
 
-  return (
-    projects
-      .slice(0, 2)
-      .map((project) => project.project_name)
-      .join(', ') +
-    ' + ' +
-    (projects.length - 2) +
-    ' more'
-  )
-}
+//   return (
+//     projects
+//       .slice(0, 2)
+//       .map((project) => project.project_name)
+//       .join(', ') +
+//     ' + ' +
+//     (projects.length - 2) +
+//     ' more'
+//   )
+// }
 </script>
 
 <template>
@@ -120,12 +120,7 @@ const formatProjectNames = (projects: Project[]) => {
     <template #cell(actions)="{ rowData }">
       <div class="flex gap-2 justify-end">
         <RouterLink :to="`${rowData.id}`" aria-label="Visit home page">
-          <VaButton
-            preset="primary"
-            size="small"
-            icon="visibility"
-            aria-label="View lake"
-          />
+          <VaButton preset="primary" size="small" icon="visibility" aria-label="View lake" />
         </RouterLink>
         <VaButton
           preset="primary"

@@ -12,15 +12,10 @@
           />
         </Transition>
         <RouterLink to="/" aria-label="Visit home page">
-        <div class="flex justify-center">
-          <VaImage
-            class="w-14 h-14"
-            src="/logo.png" 
-          />
-          <h3 class="va-h3 ml-3 hidden sm:block">
-            LDMS
-          </h3>
-        </div>
+          <div class="flex justify-center">
+            <VaImage class="w-14 h-14" src="/logo.png" />
+            <h3 class="va-h3 ml-3 hidden sm:block">LDMS</h3>
+          </div>
         </RouterLink>
       </div>
     </template>
@@ -34,7 +29,7 @@
 import { storeToRefs } from 'pinia'
 import { useGlobalStore } from '../../stores/global-store'
 import AppNavbarActions from './components/AppNavbarActions.vue'
-import VuesticLogo from '../VuesticLogo.vue'
+// import VuesticLogo from '../VuesticLogo.vue'
 
 defineProps({
   isMobile: { type: Boolean, default: false },

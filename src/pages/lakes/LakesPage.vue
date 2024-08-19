@@ -17,10 +17,10 @@ const showEditUserModal = (lake: Lake) => {
   doShowEditUserModal.value = true
 }
 
-const showAddUserModal = () => {
-  userToEdit.value = null
-  doShowEditUserModal.value = true
-}
+// const showAddUserModal = () => {
+//   userToEdit.value = null
+//   doShowEditUserModal.value = true
+// }
 
 const { init: notify } = useToast()
 

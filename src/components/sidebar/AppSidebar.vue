@@ -20,10 +20,8 @@
                 size="20px"
                 :color="iconColor(route)"
               />
-              <div
-                v-else
-                v-html="route.meta.svgIcon"
-              />
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <div v-else v-html="route.meta.svgIcon" />
               <VaSidebarItemTitle class="flex justify-between items-center leading-5 font-semibold">
                 {{ t(route.displayName) }}
                 <VaIcon v-if="route.children" :name="arrowDirection(isCollapsed)" size="20px" />

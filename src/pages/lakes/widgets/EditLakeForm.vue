@@ -2,8 +2,8 @@
 import { PropType, computed, ref, watch } from 'vue'
 import { useForm } from 'vuestic-ui'
 import { Lake } from '../types'
-import UserAvatar from './UserAvatar.vue'
-import { useProjects } from '../../projects/composables/useProjects'
+// import UserAvatar from './UserAvatar.vue'
+// import { useProjects } from '../../projects/composables/useProjects'
 import { validators } from '../../../services/utils'
 
 const props = defineProps({
@@ -19,20 +19,20 @@ const props = defineProps({
 
 const defaultNewLake: Lake = {
   id: 1,
-  englishName: "",
+  englishName: '',
   droneShots: [],
-  geoTag: "",
-  gujaratiName: "",
-  village: "",
-  dimensions: "",
-  partner: "",
-  startDate: "",
-  endDate: "",
-  capacity: "",
-  projectHead: "",
-  projectHeadContact: "",
-  supervisor: "",
-  supervisorContact: "",
+  geoTag: '',
+  gujaratiName: '',
+  village: '',
+  dimensions: '',
+  partner: '',
+  startDate: '',
+  endDate: '',
+  capacity: '',
+  projectHead: '',
+  projectHeadContact: '',
+  supervisor: '',
+  supervisorContact: '',
   fs: false,
   ss: false,
   wsi: false,
@@ -43,7 +43,7 @@ const defaultNewLake: Lake = {
   ls: false,
   fwm: false,
   sd: false,
-  mm: false
+  mm: false,
 }
 
 const newLake = ref<Lake>({ ...defaultNewLake })
@@ -97,13 +97,13 @@ const onSave = () => {
   }
 }
 
-const roleSelectOptions: { text: Capitalize<UserRole>; value: UserRole }[] = [
-  { text: 'Admin', value: 'admin' },
-  { text: 'User', value: 'user' },
-  { text: 'Owner', value: 'owner' },
-]
+// const roleSelectOptions: { text: Capitalize<UserRole>; value: UserRole }[] = [
+//   { text: 'Admin', value: 'admin' },
+//   { text: 'User', value: 'user' },
+//   { text: 'Owner', value: 'owner' },
+// ]
 
-const { projects } = useProjects({ pagination: ref({ page: 1, perPage: 9999, total: 10 }) })
+// const { projects } = useProjects({ pagination: ref({ page: 1, perPage: 9999, total: 10 }) })
 </script>
 
 <template>
@@ -216,8 +216,8 @@ const { projects } = useProjects({ pagination: ref({ page: 1, perPage: 9999, tot
         v-model="newLake.droneShots"
         type="gallery"
         dropzone
-        dropZoneText="Upload site files here"
-        uploadButtonText="Upload files"
+        drop-zone-text="Upload site files here"
+        upload-button-text="Upload files"
         file-types="image/*,video/*"
         label="Test"
       >

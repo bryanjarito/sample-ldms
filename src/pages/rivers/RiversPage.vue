@@ -20,10 +20,10 @@ const editProject = (project: Project) => {
   doShowProjectFormModal.value = true
 }
 
-const createNewProject = () => {
-  projectToEdit.value = null
-  doShowProjectFormModal.value = true
-}
+// const createNewProject = () => {
+//   projectToEdit.value = null
+//   doShowProjectFormModal.value = true
+// }
 
 const { init: notify } = useToast()
 

@@ -11,8 +11,9 @@
       :icon-color="metric.iconColor"
     >
       <template #icon>
-        <VaIcon :name="metric.icon" size="large" v-if="metric.icon"/>
-        <div v-html="metric.svgIcon" v-else></div>
+        <VaIcon v-if="metric.icon" :name="metric.icon" size="large" />
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div v-else v-html="metric.svgIcon"></div>
       </template>
     </DataSectionItem>
   </div>
@@ -50,7 +51,7 @@ const dashboardMetrics = computed<DashboardMetric[]>(() => [
     icon: null,
     changeText: '$1, 450',
     changeDirection: 'down',
-    iconBackground: "inheret",
+    iconBackground: 'inheret',
     iconColor: getColor('on-success'),
   },
   {
@@ -61,7 +62,7 @@ const dashboardMetrics = computed<DashboardMetric[]>(() => [
     icon: null,
     changeText: '25.36%',
     changeDirection: 'up',
-    iconBackground: "inheret",
+    iconBackground: 'inheret',
     iconColor: getColor('on-info'),
   },
   {
@@ -72,8 +73,8 @@ const dashboardMetrics = computed<DashboardMetric[]>(() => [
     icon: null,
     changeText: '2.5%',
     changeDirection: 'up',
-    iconBackground: "inheret",
+    iconBackground: 'inheret',
     iconColor: getColor('on-danger'),
-  }
+  },
 ])
 </script>

@@ -1,27 +1,29 @@
 <script lang="ts" setup>
-import RevenueUpdates from './cards/RevenueReport.vue'
-import ProjectTable from './cards/ProjectTable.vue'
-import RevenueByLocationMap from './cards/RevenueByLocationMap.vue'
+// import RevenueUpdates from './cards/RevenueReport.vue'
+// import ProjectTable from './cards/ProjectTable.vue'
+// import RevenueByLocationMap from './cards/RevenueByLocationMap.vue'
 import DataSection from './DataSection.vue'
-import YearlyBreakup from './cards/YearlyBreakup.vue'
-import MonthlyEarnings from './cards/MonthlyEarnings.vue'
-import RegionRevenue from './cards/RegionRevenue.vue'
-import Timeline from './cards/Timeline.vue'
+// import YearlyBreakup from './cards/YearlyBreakup.vue'
+// import MonthlyEarnings from './cards/MonthlyEarnings.vue'
+// import RegionRevenue from './cards/RegionRevenue.vue'
+// import Timeline from './cards/Timeline.vue'
 import PieChart from '../../../components/va-charts/chart-types/PieChart.vue'
 
 const data = {
   labels: [
     'Number of lakes under construction',
     'Number of checkdams under construction',
-    'Kms of river being rejuvinated (individually)'
+    'Kms of river being rejuvinated (individually)',
   ],
-  datasets: [{
-    label: 'My First Dataset',
-    data: [50, 100, 300],
-    backgroundColor: [ '#4ac788', '#007fbc', '#06bee1'],
-    hoverOffset: 4
-  }]
-};
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: [50, 100, 300],
+      backgroundColor: ['#4ac788', '#007fbc', '#06bee1'],
+      hoverOffset: 4,
+    },
+  ],
+}
 </script>
 
 <template>
@@ -37,7 +39,7 @@ const data = {
     <DataSection />
     <div class="flex justify-center w-full">
       <div class="w-2/5">
-        <PieChart :data="data"/>
+        <PieChart :data="data" />
       </div>
     </div>
     <!-- <div class="flex flex-col md:flex-row gap-4">

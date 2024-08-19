@@ -1,8 +1,8 @@
 import { sleep } from '../../services/utils'
 import { Lake } from '../../pages/lakes/types'
 import lakesDb from './lakes-db.json'
-import projectsDb from './projects-db.json'
-import { Project } from '../../pages/projects/types'
+// import projectsDb from './projects-db.json'
+// import { Project } from '../../pages/projects/types'
 
 export const lakes = lakesDb as Lake[]
 
@@ -34,7 +34,7 @@ const getSortItem = (obj: any, sortBy: string) => {
 
 export const getLakes = async (filters: Partial<Filters & Pagination & Sorting>) => {
   await sleep(1000)
-  const { isActive, search, sortBy, sortingOrder } = filters
+  const { search, sortBy, sortingOrder } = filters
   let filteredLakes = lakes
 
   // filteredLakes = filteredLakes.filter((lake) => lake.active === isActive)
