@@ -79,8 +79,8 @@
       </video> -->
       <VaImage fit="cover" class="w-full" src="/samples/sample-image1.jpg" lazy />
     </div>
-    <div class="grid md:grid-cols-2 h-[450px] mx-16 items-center mt-14 mb-44 md:mb-0">
-      <div class="text-4xl font-bold px-3">
+    <div class="grid md:grid-cols-2 h-auto mx-10 md:mx-16 items-center mt-14">
+      <div class="text-4xl font-bold px-0 sm:px-3">
         We won the battle against "Water Scarcity" Panch Ganga Tirth - Triveni Sangam
       </div>
       <div class="text-lg px-3">
@@ -98,7 +98,7 @@
         </p>
       </div>
     </div>
-    <div id="lakes" class="bg-gray-100 p-10 mt-24">
+    <div id="lakes" class="bg-gray-100 p-10 mt-12 sm:mt-24">
       <div class="flex justify-between mx-7 my-5">
         <div class="text-3xl font-bold">Lakes</div>
         <VaButton> More details... </VaButton>
@@ -118,8 +118,8 @@
         </div>
       </div>
     </div>
-    <div class="grid md:grid-cols-2 h-[450px] mx-16 items-center mt-14 mb-44 md:mb-0">
-      <div class="text-4xl font-bold px-3">
+    <div class="grid md:grid-cols-2 h-auto mx-10 md:mx-16 items-center mt-14">
+      <div class="text-4xl font-bold px-0 sm:px-3">
         We won the battle against "Water Scarcity" Panch Ganga Tirth - Triveni Sangam
       </div>
       <div class="text-lg px-3">
@@ -137,7 +137,7 @@
         </p>
       </div>
     </div>
-    <div id="rivers" class="bg-gray-100 p-10 mt-24">
+    <div id="rivers" class="bg-gray-100 p-10 mt-12 sm:mt-24">
       <div class="flex justify-between mx-7 my-5">
         <div class="text-3xl font-bold">Rivers</div>
         <VaButton> More details... </VaButton>
@@ -157,8 +157,8 @@
         </div>
       </div>
     </div>
-    <div class="grid md:grid-cols-2 h-[450px] mx-16 items-center mt-14 mb-44 md:mb-0">
-      <div class="text-4xl font-bold px-3">
+    <div class="grid md:grid-cols-2 h-auto mx-10 md:mx-16 items-center mt-14">
+      <div class="text-4xl font-bold px-0 sm:px-3">
         We won the battle against "Water Scarcity" Panch Ganga Tirth - Triveni Sangam
       </div>
       <div class="text-lg px-3">
@@ -176,7 +176,7 @@
         </p>
       </div>
     </div>
-    <div id="dams" class="bg-gray-100 p-10 mt-24">
+    <div id="dams" class="bg-gray-100 p-10 mt-12 sm:mt-24">
       <div class="flex justify-between mx-7 my-5">
         <div class="text-3xl font-bold">Dams</div>
         <VaButton> More details... </VaButton>
@@ -196,8 +196,8 @@
         </div>
       </div>
     </div>
-    <div class="grid md:grid-cols-2 h-[450px] mx-16 items-center mt-14 mb-44 md:mb-0">
-      <div class="text-4xl font-bold px-3">
+    <div class="grid md:grid-cols-2 h-auto mx-10 md:mx-16 items-center mt-14">
+      <div class="text-4xl font-bold px-0 sm:px-3">
         We won the battle against "Water Scarcity" Panch Ganga Tirth - Triveni Sangam
       </div>
       <div class="text-lg px-3">
@@ -215,7 +215,7 @@
         </p>
       </div>
     </div>
-    <div id="trees" class="bg-gray-100 p-10 mt-24">
+    <div id="trees" class="bg-gray-100 p-10 mt-12 sm:mt-24">
       <div class="flex justify-between mx-7 my-5">
         <div class="text-3xl font-bold">Trees</div>
         <VaButton> More details... </VaButton>
