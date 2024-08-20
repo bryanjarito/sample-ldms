@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import i18n from './i18n'
 import { createVuestic } from 'vuestic-ui'
 import { createGtm } from '@gtm-support/vue-gtm'
-import veProgress from 'vue-ellipse-progress'
 import VueViewer from 'v-viewer'
 import 'viewerjs/dist/viewer.css'
 
@@ -13,7 +12,6 @@ import App from './App.vue'
 
 const app = createApp(App)
 
-app.use(veProgress)
 app.use(VueViewer)
 app.use(stores)
 app.use(router)

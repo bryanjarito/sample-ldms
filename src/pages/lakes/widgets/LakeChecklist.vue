@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 // import { useForm } from 'vuestic-ui'
 // import { Lake } from '../types'
 import { Checklist } from '../../checklist/types'
 // import UserAvatar from './UserAvatar.vue'
 // import { useProjects } from '../../projects/composables/useProjects'
 // import { validators } from '../../../services/utils'
+import 'vue3-circle-progress/dist/circle-progress.css'
+import CircleProgress from 'vue3-circle-progress'
 
 const checklist: Checklist = {
   fs: true,
@@ -44,14 +46,17 @@ watch(
   },
   { deep: true },
 )
+
+const percentage = computed(() => {
+  const average = (progress.value / totalChecklist) * 100
+  return average.toFixed(1)
+})
 </script>
 
 <template>
   <div class="flex flex-col md:flex-row">
     <div class="flex w-full md:w-1/2 justify-center mb-10">
-      <VeProgress :progress="((progress / totalChecklist) * 100).toFixed(1)">
-        {{ ((progress / totalChecklist) * 100).toFixed(1) }}%
-      </VeProgress>
+      <CircleProgress :percent="percentage" :show-percent="true" />
     </div>
     <div class="flex flex-col">
       <VaCheckbox v-model="newChecklist.fs" label="Feasibility Study" class="mb-6" />
@@ -68,3 +73,8 @@ watch(
     </div>
   </div>
 </template>
+<style>
+.current-counter:after {
+  content: '%';
+}
+</style>
