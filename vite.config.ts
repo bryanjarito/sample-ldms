@@ -10,15 +10,13 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [
-    vue(
-      {
-        template: {
-          compilerOptions: {
-            isCustomElement: (tag) => ['progress-bar'].includes(tag),
-          }
-        }
-      }
-    ),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => ['progress-bar'].includes(tag),
+        },
+      },
+    }),
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'),
     }),

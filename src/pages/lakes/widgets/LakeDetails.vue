@@ -203,8 +203,8 @@ watch(avatar, (newAvatar) => {
     </div>
     <!-- v-slot="{ cancel, ok }" -->
     <VaModal v-model="doShowMediaModal" fullscreen close-button hide-default-actions :no-outside-dismiss="true">
-      <Viewer :images="images" class="flex">
-        <img v-for="src in images" :key="src" :src="src" class="w-36 px-2" />
+      <Viewer :images="images" class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+        <img v-for="src in images" :key="src" :src="src" class="w-full px-2" />
       </Viewer>
       <!-- <VaImage src="/samples/sample-image1.jpg" alt="" /> -->
     </VaModal>
