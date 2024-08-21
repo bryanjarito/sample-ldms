@@ -48,28 +48,38 @@
       <VaSidebar v-model="showSidebar" class="block md:hidden">
         <VaSidebarItem>
           <VaSidebarItemContent>
-            <VaSidebarItemTitle> Home </VaSidebarItemTitle>
+            <VaSidebarItemTitle>
+              <a href="#home">Home</a>
+            </VaSidebarItemTitle>
           </VaSidebarItemContent>
         </VaSidebarItem>
         <VaSidebarItem>
-          <VaSidebarItemContent>
-            <VaSidebarItemTitle> Lakes </VaSidebarItemTitle>
-          </VaSidebarItemContent>
+          <a href="#lakes" @click="closeSideBar">
+            <VaSidebarItemContent>
+              <VaSidebarItemTitle> Lakes </VaSidebarItemTitle>
+            </VaSidebarItemContent>
+          </a>
         </VaSidebarItem>
         <VaSidebarItem>
-          <VaSidebarItemContent>
-            <VaSidebarItemTitle> Rivers </VaSidebarItemTitle>
-          </VaSidebarItemContent>
+          <a href="#rivers" @click="closeSideBar">
+            <VaSidebarItemContent>
+              <VaSidebarItemTitle> Rivers </VaSidebarItemTitle>
+            </VaSidebarItemContent>
+          </a>
         </VaSidebarItem>
         <VaSidebarItem>
-          <VaSidebarItemContent>
-            <VaSidebarItemTitle> Dams </VaSidebarItemTitle>
-          </VaSidebarItemContent>
+          <a href="#dams" @click="closeSideBar">
+            <VaSidebarItemContent>
+              <VaSidebarItemTitle> Dams </VaSidebarItemTitle>
+            </VaSidebarItemContent>
+          </a>
         </VaSidebarItem>
         <VaSidebarItem>
-          <VaSidebarItemContent>
-            <VaSidebarItemTitle> Trees </VaSidebarItemTitle>
-          </VaSidebarItemContent>
+          <a href="#trees" @click="closeSideBar">
+            <VaSidebarItemContent>
+              <VaSidebarItemTitle> Trees </VaSidebarItemTitle>
+            </VaSidebarItemContent>
+          </a>
         </VaSidebarItem>
       </VaSidebar>
     </template>
@@ -244,4 +254,8 @@ import { ref } from 'vue'
 
 const showSidebar = ref(false)
 // const breakpoint = useBreakpoint()
+
+const closeSideBar = () => {
+  showSidebar.value = !showSidebar.value
+}
 </script>
